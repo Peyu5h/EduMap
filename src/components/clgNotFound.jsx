@@ -1,6 +1,7 @@
 import  { useState, useEffect } from 'react';
 
 import logo from "../assets/logo.png";
+import { Link } from 'react-router-dom';
 
 
 const ClgNotFound = () => {
@@ -24,9 +25,9 @@ const ClgNotFound = () => {
     <div>
     <nav className="navbar relative my-0">
       <div className="flex items-start justify-between mx-auto space-x-20 my-3">
-        <a href="Edumap">
+        <Link to="/">
           <img src={logo} alt="logo" className="w-36" />
-        </a>
+        </Link>
       </div>
     </nav>
 <div className="containerer text-center mx-auto mt-24 ">

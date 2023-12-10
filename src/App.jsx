@@ -11,9 +11,9 @@ function App() {
     <AnimatePresence mode="wait">
       <BrowserRouter>
         <Routes>
-          <Route path="/EduMap" element={<HomePage />} />
-          <Route path="EduMap/atharva" element={<AtharvaCollege />} />
-          <Route path="EduMap/error404" element={<ClgNotFound />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="atharva" element={<AtharvaCollege />} />
+          <Route path="error404" element={<ClgNotFound />} />
         </Routes>
       </BrowserRouter>
     </AnimatePresence>

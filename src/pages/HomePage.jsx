@@ -3,6 +3,7 @@ import CollegeCard from "./CollegeCard";
 
 import BranchBtns from "../components/branchBtn";
 import RangeSlider from "../components/RangeSlider";
+import { Link } from "react-router-dom";
 
 // import listColleges from "./CollegeData.json";  //College JSON data
 
@@ -415,13 +416,13 @@ const HomePage = () => {
 
             {/* --------------Card-Container--------------------- */}
             <div className="card-container">
-              <a href="/EduMap/error404">
+              <Link to="/error404">
                 <div className="clg-grid grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-center items-start gap-x-[12px] gap-y-[24px] mt-16">
                   {sortedColleges.map((college) => (
                     <CollegeCard key={college.id} {...college} />
                   ))}
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
