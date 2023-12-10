@@ -1,0 +1,592 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* HAMBURGER MENU */
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  top: 0;
+  left: 0;
+  background: #9c9aa6;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+.navbar {
+  z-index: 999;
+}
+
+.cell {
+  height: 315px;
+  margin-right: 25px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cell img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.flickity-prev-next-button svg {
+  fill: #1e1e1e;
+}
+.flickity-prev-next-button {
+  background: #f1ae2d;
+}
+
+.content {
+  text-overflow: ellipsis;
+}
+
+.slider {
+  transition: 0.5s;
+}
+
+///Recriters slider
+
+.container {
+  padding-top: 150px;
+}
+
+.slick-slide {
+  margin: 0 20px;
+}
+.slick-slide img {
+  width: 100%;
+}
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.copy {
+  padding-top: 250px;
+}
+
+.customer-logos .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.customer-logos .slide img {
+  width: 100%; /* Make all images have the same width */
+}
+
+.map iframe {
+  filter: invert(100%);
+}
+
+//-------------------Custom ScrollBar-------------------------------//
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1ae2d;
+}
+
+/* ==================================================================== */
+
+.card {
+  width: 20.3125rem;
+  height: 575px;
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  margin: 15px;
+  transition: all 0.15s;
+  display: block;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 2px 3px 10px 3.5px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  position: relative;
+  top: -5px;
+  bottom: 0;
+}
+.clg-img {
+  width: 325px;
+  height: 194.08px;
+  background-image: url("https://uploads-ssl.webflow.com/64c4b66a44c38c5fa4309e5a/64c4b85c28938b4cb4143d55_clg.png");
+  background-position: 0 0;
+  background-size: auto;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.gradient {
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(
+    305deg,
+    rgba(0, 0, 0, 0.58),
+    rgba(137, 137, 137, 0) 61%,
+    rgba(255, 255, 255, 0) 99%
+  );
+  border-radius: 20px;
+  display: block;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.image-container {
+  width: 20.3125rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.rating {
+  z-index: 1;
+  margin-bottom: 10px;
+  margin-right: 30px;
+  font-family: Exo, sans-serif;
+  position: absolute;
+  top: auto;
+  bottom: 0%;
+  left: auto;
+  right: 0%;
+}
+
+.stars {
+  display: inline-block;
+  position: absolute;
+  top: auto;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.clgname-location-div {
+  cursor: default;
+  margin-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 25px;
+}
+
+.clg-name {
+  color: #d8d8d8;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: PT Sans, sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.clg-location {
+  color: #7a7979;
+  font-family: Righteous, sans-serif;
+  font-size: 15px;
+  display: inline;
+  position: absolute;
+}
+
+.clg-info-div {
+  cursor: default;
+  padding: 0 15px 15px;
+  position: relative;
+}
+
+.branch {
+  color: #d8d8d8;
+  cursor: default;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: PT Sans, sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.cutoff-div {
+  margin-top: 15px;
+  margin-left: 8px;
+  display: inline-block;
+}
+
+.rightsidefee-div {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  margin-left: 0;
+  padding-left: 0;
+  display: inline-block;
+  position: relative;
+  bottom: 116px;
+  left: 42px;
+}
+
+.text-copy {
+  color: #1e1e1e;
+  justify-content: center;
+  align-items: center;
+  font-family: Ubuntu, Helvetica, sans-serif;
+  font-weight: 400;
+  display: flex;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.jee,
+.mhtcet {
+  width: 2.8125rem;
+  cursor: context-menu;
+  margin-top: 37px;
+  margin-left: 12px;
+  padding-top: 0;
+  display: none;
+}
+
+.yearly-fees {
+  color: #1e1e1e;
+  justify-content: center;
+  align-items: center;
+  font-family: Ubuntu, Helvetica, sans-serif;
+  font-weight: 400;
+  display: flex;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.yearly-fees.accepted-exam,
+.yearly-fees.bruh {
+  border: 1px #fff;
+  padding-left: 0;
+  font-family: Ubuntu, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.text-span {
+  margin-top: 4px;
+  margin-left: 4px;
+  font-size: 10px;
+}
+
+.bold-text {
+  color: rgba(216, 216, 216, 0.6);
+  justify-content: flex-end;
+  font-weight: 300;
+  display: flex;
+}
+
+._2023-2 {
+  color: #d8d8d8;
+  margin-bottom: 8px;
+  font-family: PT Sans, sans-serif;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.clg-location-2 {
+  color: #7a7979;
+  display: flex;
+  font-size: 15px;
+  display: inline;
+  position: absolute;
+}
+
+.cet-2 {
+  color: #ebe8e8;
+  margin-top: -18px;
+  margin-left: 76px;
+  font-family: Varela Round, sans-serif;
+  font-size: 11px;
+}
+
+.mht-cet_cuttoff-2 {
+  width: 130px;
+  height: 30px;
+  background-color: #ff8c22;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  margin-left: -8px;
+  position: relative;
+}
+
+.mht-cet_cuttoff-2.cutoff {
+  margin-bottom: 15px;
+  display: block;
+}
+
+.jee_mains-2 {
+  color: #ebe8e8;
+  margin-top: 38px;
+  margin-left: 6px;
+  font-family: Varela Round, sans-serif;
+  font-size: 11px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.outof-5-2 {
+  color: #ebe8e8;
+  font-size: 28px;
+  display: inline-block;
+}
+
+.ranking-2 {
+  width: 168px;
+  color: #d8d8d8;
+  margin-bottom: 0;
+  margin-left: 112px;
+  font-family: Ubuntu, Helvetica, sans-serif;
+  font-size: 10px;
+  font-style: italic;
+  display: inline;
+  position: absolute;
+}
+
+.dividing-line-2 {
+  width: 1px;
+  height: 88px;
+
+  background-color: #d8d8d8;
+  display: inline-block;
+  position: absolute;
+  top: auto;
+  bottom: 12%;
+  left: 50%;
+  right: 0%;
+}
+
+._2021-percentile-2 {
+  color: #d8d8d8;
+  font-family: PT Sans, sans-serif;
+  font-size: 16px;
+  display: inline-block;
+  position: absolute;
+  bottom: 22px;
+  left: 78px;
+}
+
+.fee-div-2 {
+  width: 130px;
+  height: 30px;
+  background-color: #ff8c22;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  margin-left: -8px;
+  position: relative;
+}
+
+.fee-div-2.fees {
+  width: 130px;
+  height: 1.875rem;
+  margin-top: 70px;
+  margin-bottom: 0;
+  margin-left: 1px;
+  display: block;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.line-2 {
+  color: #ebe8e8;
+  margin-top: 0;
+  margin-left: 4px;
+  padding-left: 0;
+  padding-right: 0;
+  display: inline-block;
+}
+
+._2022-percentile-2 {
+  color: #d8d8d8;
+  font-family: PT Sans, sans-serif;
+  font-size: 16px;
+  display: inline-block;
+  position: absolute;
+  bottom: 54px;
+  left: 78px;
+}
+
+._2022-2 {
+  color: #d8d8d8;
+  margin-bottom: 8px;
+  font-family: PT Sans, sans-serif;
+  font-size: 16px;
+}
+
+.exams-accepted-2 {
+  width: 130px;
+  height: 30px;
+  background-color: #ff8c22;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  margin-left: -8px;
+  position: relative;
+}
+
+.exams-accepted-2.accepted-exam {
+  width: 130px;
+  height: 1.875rem;
+  margin-bottom: 0;
+  margin-left: -6px;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.text-span-3 {
+  font-size: 9px;
+}
+
+.actual-fig-2 {
+  color: #ebe8e8;
+  margin-top: 2px;
+  margin-left: 14px;
+  font-family: Varela Round, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+._2023-percentile-2 {
+  color: #d8d8d8;
+  margin-top: 0;
+  padding-top: 0;
+  padding-left: 0;
+  font-family: PT Sans, sans-serif;
+  font-size: 16px;
+  display: inline-block;
+  position: absolute;
+  bottom: 86px;
+  left: 78px;
+}
+
+._2021-2 {
+  color: #d8d8d8;
+  font-family: PT Sans, sans-serif;
+  font-size: 16px;
+}
+
+.actual-rating-2 {
+  z-index: 1;
+  color: #ebe8e8;
+  margin-right: 2px;
+  display: inline-block;
+  position: static;
+  top: auto;
+  bottom: 0%;
+  left: auto;
+  right: 0%;
+}
+
+/* range slider */
+
+input[type="range"]::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 24px;
+  height: 24px;
+  -webkit-appearance: none;
+}
+
+/* radio btn */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 14px;
+  border: 2px solid #fad02e; /* Set the border color to yellowpri */
+  border-radius: 100%;
+  outline: none;
+  background-color: transparent;
+  margin-right: 8px; /* Add some spacing between the radio button and label */
+}
+
+/* Styling for checked radio buttons */
+input[type="radio"]:checked {
+  background-color: #fad02e; /* Set the background color when checked to yellowpri */
+}
