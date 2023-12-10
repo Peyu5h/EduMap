@@ -53,7 +53,7 @@ const HomePage = () => {
 
   useEffect(() => {
     // Fetch the data from the URL
-    fetch("../collegeData.json")
+    fetch("https://rest-full-api.github.io/collegeData/getColleges.json")
       .then((response) => response.json())
       .then((data) => {
         // Assuming the JSON structure matches your data
